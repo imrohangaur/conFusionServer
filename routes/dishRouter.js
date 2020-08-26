@@ -43,7 +43,8 @@ dishRouter.route('/')
 
 
 
-dishRouter.route('/:dishId').get((req,res,next) => {
+dishRouter.route('/:dishId')
+.get((req,res,next) => {
     Dishes.findById(req.params.dishId)
     .then((dish) => {
         res.statusCode = 200;
